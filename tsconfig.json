@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "commonjs", // CommonJS modullar tizimini ishlatadi
+    "declaration": true, // Har bir TypeScript fayli uchun deklaratsiya (.d.ts) fayllarini yaratadi
+    "removeComments": true, // Kompilyatsiya qilingan koddan izohlarni olib tashlaydi
+    "emitDecoratorMetadata": true, // Dekoratorlar uchun metadata yaratadi
+    "experimentalDecorators": true, // Eksperimental dekoratorlarni qo'llab-quvvatlaydi
+    "allowSyntheticDefaultImports": true, // Default importlarni sintetik ravishda qo'llab-quvvatlaydi
+    "target": "ES2021", // JavaScriptning ES2021 versiyasiga kompilyatsiya qiladi
+    "sourceMap": true, // Source map fayllarini yaratadi (debugging uchun)
+    "outDir": "./dist", // Kompilyatsiya qilingan fayllarni chiqarish katalogi
+    "baseUrl": "./", // Loyihaning asosiy katalogi
+    "incremental": true, // Inkremental kompilyatsiyani yoqadi (tezroq kompilyatsiya qilish uchun)
+    "strictNullChecks": false, // Null va undefined qiymatlarini qat'iy tekshirishni o'chiradi
+    "noImplicitAny": false, // Aniq tur ko'rsatilmagan joylarda any turini qo'llashga ruxsat beradi
+    "strictBindCallApply": false, // bind, call va apply metodlari uchun qat'iy tekshirishni o'chiradi
+    "forceConsistentCasingInFileNames": false, // Fayl nomlarida bir xil registrdan foydalanishni majburiy qilmaydi
+    "noFallthroughCasesInSwitch": false, // switch bayonotlarida fallthrough holatlarini tekshirmaydi
+    "strict": true, // Qat'iy kompilyatsiya rejimini yoqadi
+    "strictPropertyInitialization": false, // Property initializationni tekshirishni o'chiradi
+    // "esModuleInterop": true, // ES modullarini interoperabil ro'yxatga olish
+    "skipLibCheck": true, // Kutubxonalarni tekshirishni o'tkazib yuboradi (kompilyatsiya vaqtini qisqartirish uchun)
+  }
+}
