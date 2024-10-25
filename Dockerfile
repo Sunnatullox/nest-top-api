@@ -1,11 +1,24 @@
-FROM node:22-alpine
+# Base image
+FROM node:20-alpine
 
-WORKDIR /opt/app
+# Set working directory
+WORKDIR /app
 
-COPY package.json package.json
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-RUN npm install && npm run build && npm prune --production
+# Install dependencies
+RUN npm install -g @nestjs/cli
+RUN npm install --omit=dev --legacy-peer-deps
 
+# Copy the rest of the application code
 COPY . .
 
-CMD ["node", "./dist/main.js"]
+# Build the application
+RUN npm run build
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Start the application
+CMD ["node", "dist/main"]
