@@ -8,12 +8,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
       - name: Push to registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
-          registry: docker.pkg.github.com
-          name: docker.pkg.github.com/Sunnatullox/nest-top-api/nest-top-api
-          username: ${{ secrets.DOCKER_USERNAME }}
+          registry: ghcr.io
+          name: ghcr.io/Sunnatullox/nest-top-api
+          username: ${{ secrets.DOCKER_USERNAME }}  # Ensure this secret is set correctly
           password: ${{ secrets.DOCKER_PASSWORD }}
           tags: "develop"
