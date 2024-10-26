@@ -1,16 +1,16 @@
-name: Publish docker image
+name: Publish Docker
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Push to registry
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v3
         with:
           registry: docker.pkg.github.com
           name: docker.pkg.github.com/Sunnatullox/nest-top-api/nest-top-api
