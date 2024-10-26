@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Push to registry
-        uses: elgohr/Publish-Docker-Github-Action@v3
+        uses: elgohr/Publish-Docker-Github-Action@latest
         with:
           registry: docker.pkg.github.com
           name: docker.pkg.github.com/Sunnatullox/nest-top-api/nest-top-api
